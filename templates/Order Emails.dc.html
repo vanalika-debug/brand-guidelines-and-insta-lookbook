@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>body{margin:0;background:#EDE6D9;}a{color:#17362D;}a:hover{color:#231F1B;}</style>
+</helmet>
+<div style="min-height:100vh;background:#EDE6D9;color:#231F1B;font-family:Lora,serif;padding:48px 5vw 80px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px;">
+
+<header style="display:flex;flex-direction:column;gap:12px;max-width:720px;">
+<div style="font-size:11px;letter-spacing:.3em;color:#8A6A1E;">TEMPLATES · ORDER EMAILS</div>
+<h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:42px;line-height:1.1;">Seven emails, <em style="color:#8A6A1E;">one register.</em></h1>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#6E655A;text-wrap:pretty;">Cream ground, forest green for the one action and the footer. 600px column. Anything in braces is filled by Shopify.</p>
+</header>
+
+<div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;">
+
+<nav style="display:flex;flex-direction:column;gap:2px;width:240px;flex:0 0 auto;">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
+<button onClick="{{ t.select }}" style="text-align:left;font-family:Lora,serif;font-size:13px;line-height:1.4;padding:11px 14px;border:none;cursor:pointer;transition:background 360ms,color 360ms;background:{{ t.bg }};color:{{ t.fg }};display:flex;gap:12px;"><span style="font-size:10px;letter-spacing:.2em;opacity:.7;padding-top:2px;">{{ t.num }}</span><span>{{ t.name }}</span></button>
+</sc-for>
+</nav>
+
+<div style="flex:1 1 600px;max-width:640px;display:flex;flex-direction:column;gap:16px;">
+
+<div style="display:flex;flex-direction:column;gap:4px;font-size:13px;color:#6E655A;border-bottom:1px solid rgba(35,31,27,.14);padding-bottom:14px;">
+<sc-if value="{{ is0 }}" hint-placeholder-val="{{ true }}"><div style="color:#231F1B;font-size:15px;">Your Velour order #{Order no.} is confirmed</div><div>We will begin packing it by hand today.</div></sc-if>
+<sc-if value="{{ is1 }}"><div style="color:#231F1B;font-size:15px;">Your Velour box is on its way</div><div>It left our kitchen today, with tracking inside.</div></sc-if>
+<sc-if value="{{ is2 }}"><div style="color:#231F1B;font-size:15px;">Has your Velour box arrived well?</div><div>If anything is not right, reply and we will put it right.</div></sc-if>
+<sc-if value="{{ is3 }}"><div style="color:#231F1B;font-size:15px;">{Gifted by} has sent you something from Velour</div><div>It should reach you by {Date}.</div></sc-if>
+<sc-if value="{{ is4 }}"><div style="color:#231F1B;font-size:15px;">Your bag is where you left it</div><div>We have kept it as it was. No rush.</div></sc-if>
+<sc-if value="{{ is5 }}"><div style="color:#231F1B;font-size:15px;">Your Velour Circle points, {Month}</div><div>{Points} points, and what they turn into.</div></sc-if>
+<sc-if value="{{ is6 }}"><div style="color:#231F1B;font-size:15px;">Your Velour gifting quote, {Company}</div><div>The quote for {Occasion}, as we discussed.</div></sc-if>
+<div style="font-size:11px;letter-spacing:.06em;">From: the Velour team &lt;hello@velourchocolates.com&gt;</div>
+</div>
+
+<div style="background:#F6F2EA;width:100%;max-width:600px;">
+<div style="padding:36px 40px 26px;display:flex;flex-direction:column;align-items:center;gap:6px;border-bottom:1px solid rgba(35,31,27,.14);">
+<div style="font-family:'Alex Brush',cursive;font-size:40px;line-height:1;color:#8A6A1E;">Velour</div>
+<div style="font-size:9px;letter-spacing:.42em;color:#6E655A;">LUXURY DARK CHOCOLATES</div>
+</div>
+
+<div style="padding:40px 40px 44px;display:flex;flex-direction:column;gap:22px;font-size:15px;line-height:1.7;color:#6E655A;">
+
+<sc-if value="{{ is0 }}" hint-placeholder-val="{{ true }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">ORDER #{ORDER NO.}</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">Thank you. <em>We have your order.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Hello {Name}, your order is in, and we will begin packing it by hand today. We will write again when it leaves our kitchen, with tracking.</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid rgba(35,31,27,.14);">
+<div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(35,31,27,.14);"><img src="../assets/products/florentine-tin-cream.png" style="width:60px;height:60px;object-fit:cover;display:block;"><div style="flex:1;"><div style="color:#231F1B;">Almond Cranberry Florentine</div><div style="font-size:12.5px;">Tin · Qty 1</div></div><div style="color:#231F1B;">₹{Price}</div></div>
+<div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(35,31,27,.14);"><img src="../assets/products/sleeve-box-dates-6.png" style="width:60px;height:60px;object-fit:cover;display:block;"><div style="flex:1;"><div style="color:#231F1B;">Stuffed Medjool dates</div><div style="font-size:12.5px;">Box of 6 · Qty 1</div></div><div style="color:#231F1B;">₹{Price}</div></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0 0;font-size:13.5px;"><span>Shipping</span><span>₹{Shipping}</span></div>
+<div style="display:flex;justify-content:space-between;padding:6px 0 0;color:#231F1B;"><span>Total</span><span>₹{Total}</span></div>
+</div>
+<div style="font-size:13.5px;"><div style="font-size:10px;letter-spacing:.3em;color:#8A6A1E;">DELIVERING TO</div>{Name}, {Address line}, {City} {PIN}</div>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">VIEW YOUR ORDER</span></div>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Vanalika Dhakre Nagpal · Founder</div></div>
+</sc-if>
+
+<sc-if value="{{ is1 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">ORDER #{ORDER NO.} · SHIPPED</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">Your box is <em>on its way.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Hello {Name}, your order left our kitchen today with {Courier}.</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid rgba(35,31,27,.14);font-size:14px;">
+<div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);"><span>Courier</span><span style="color:#231F1B;">{Courier}</span></div>
+<div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);"><span>Tracking no.</span><span style="color:#231F1B;">{AWB}</span></div>
+<div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);"><span>Expected by</span><span style="color:#231F1B;">{Date}</span></div>
+</div>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">TRACK YOUR ORDER</span></div>
+<p style="margin:0;font-size:13.5px;">Once it arrives, keep it somewhere cool and dry, away from the fridge.</p>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Vanalika Dhakre Nagpal · Founder</div></div>
+</sc-if>
+
+<sc-if value="{{ is2 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">ORDER #{ORDER NO.} · DELIVERED</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">It has <em>arrived.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Hello {Name}, our records say your order reached you on {Date}. We hope it arrived just as we packed it. If anything is not right, reply to this email and one of us will put it right.</p>
+<p style="margin:0;">When you have tasted it, would you tell us what you thought? A few honest words help the next person choose.</p>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">WRITE A REVIEW</span></div>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Vanalika Dhakre Nagpal · Founder</div></div>
+</sc-if>
+
+<sc-if value="{{ is3 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">A GIFT FOR YOU</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">Something is <em>on its way to you.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Hello {Recipient}, {Gifted by} has sent you a box from Velour. It should reach you by {Date}.</p>
+<div style="border-left:2px solid #B5923D;padding:2px 0 2px 18px;display:flex;flex-direction:column;gap:6px;"><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;line-height:1.35;color:#231F1B;">“{Gift message}”</div><div style="font-size:12.5px;letter-spacing:.06em;">{Gifted by}</div></div>
+<img src="../assets/products/lid-with-ribbon-REAL.jpg" style="width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 45%;display:block;">
+<p style="margin:0;">There are no prices inside, only chocolate.</p>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">FOLLOW YOUR GIFT</span></div>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Vanalika Dhakre Nagpal · Founder</div></div>
+</sc-if>
+
+<sc-if value="{{ is4 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">YOUR BAG</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">You left something <em>in your bag.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Hello {Name}, we have kept it as it was. It will be here when you are ready.</p>
+<div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-top:1px solid rgba(35,31,27,.14);border-bottom:1px solid rgba(35,31,27,.14);"><img src="../assets/products/florentine-tin-cream.png" style="width:72px;height:72px;object-fit:cover;display:block;"><div style="flex:1;"><div style="color:#231F1B;">{Product name}</div><div style="font-size:12.5px;">{Variant} · Qty {n}</div></div><div style="color:#231F1B;">₹{Price}</div></div>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">RETURN TO YOUR BAG</span></div>
+<p style="margin:0;font-size:13.5px;">A question about an ingredient? Reply here, or message us on WhatsApp at +91 98706 37994.</p>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Ananya Mittal · Marketing Head</div></div>
+</sc-if>
+
+<sc-if value="{{ is5 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">VELOUR CIRCLE · {MONTH}</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">Points that turn into <em>chocolate.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<div style="display:flex;align-items:baseline;gap:12px;"><div style="font-family:'Cormorant Garamond',serif;font-size:68px;line-height:1;color:#17362D;">{Points}</div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;">points</div></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:13.5px;">
+<div style="display:flex;justify-content:space-between;"><span style="color:#231F1B;">Nib</span><span style="color:#8A6A1E;">₹{Spent} of ₹50,000 to Bean</span></div>
+<div style="height:1px;background:rgba(35,31,27,.14);position:relative;"><div style="position:absolute;left:0;top:-1px;height:3px;width:28%;background:#17362D;"></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;color:#231F1B;"><div><span style="color:#B5923D;">–</span> 500 points: a tasting sample</div><div><span style="color:#B5923D;">–</span> A bar on your birthday</div><div><span style="color:#B5923D;">–</span> 1 point for every ₹10</div></div>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">SPEND YOUR POINTS</span></div>
+<p style="margin:0;font-size:13.5px;">No coupon codes.</p>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Ananya Mittal · Marketing Head</div></div>
+</sc-if>
+
+<sc-if value="{{ is6 }}">
+<div style="font-size:10.5px;letter-spacing:.32em;color:#8A6A1E;">QUOTE · {Q-NO.}</div>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.12;color:#231F1B;">Your gifting quote, <em>as discussed.</em></h2>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;">Dear {Name}, thank you for your time today. Here is the quote for {Occasion}.</p>
+<div style="display:flex;flex-direction:column;font-size:13.5px;border-top:1px solid #231F1B;">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 48px 84px 92px;gap:10px;padding:10px 0;border-bottom:1px solid rgba(35,31,27,.14);font-size:10px;letter-spacing:.24em;color:#8A6A1E;"><span>ITEM</span><span>QTY</span><span>PER BOX</span><span style="text-align:right;">AMOUNT</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 48px 84px 92px;gap:10px;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);color:#231F1B;"><span>Gift box: 6 dates + 6 florentines</span><span>{n}</span><span>₹{Rate}</span><span style="text-align:right;">₹{Amount}</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 48px 84px 92px;gap:10px;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);color:#231F1B;"><span>Your logo on the sleeve</span><span>{n}</span><span>₹{Rate}</span><span style="text-align:right;">₹{Amount}</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 48px 84px 92px;gap:10px;padding:11px 0;border-bottom:1px solid rgba(35,31,27,.14);color:#231F1B;"><span>Card inside, your message</span><span>{n}</span><span>₹{Rate}</span><span style="text-align:right;">₹{Amount}</span></div>
+<div style="display:flex;justify-content:space-between;padding:11px 0 0;"><span>Delivery to {n} addresses</span><span>₹{Amount}</span></div>
+<div style="display:flex;justify-content:space-between;padding:6px 0 0;"><span>GST</span><span>₹{Amount}</span></div>
+<div style="display:flex;justify-content:space-between;padding:8px 0 0;color:#231F1B;font-size:15px;"><span>Total</span><span>₹{Total}</span></div>
+</div>
+<p style="margin:0;font-size:13.5px;">This quote holds until {Date}. Boxes are packed by hand and dispatch {n} days after you confirm.</p>
+<div><span style="display:inline-block;background:#17362D;color:#F7F2EA;font-size:11px;letter-spacing:.28em;padding:16px 28px;">CONFIRM THIS QUOTE</span></div>
+<div style="color:#231F1B;">With warmth,<br>the Velour team<div style="font-size:12.5px;color:#6E655A;margin-top:6px;">Abhay Srivastava · Sales Associate</div></div>
+</sc-if>
+
+</div>
+
+<div style="background:#17362D;padding:30px 40px;display:flex;flex-direction:column;gap:10px;color:#F7F2EA;font-size:12.5px;line-height:1.6;">
+<div style="font-family:'Alex Brush',cursive;font-size:28px;line-height:1;color:#C9A94F;">Velour</div>
+<div>hello@velourchocolates.com · +91 98706 37994</div>
+<div style="color:#C9C2B4;">We reply 12pm–7pm, Sundays off. velourchocolates.com</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const NAMES = ['Order confirmed', 'Shipped, with tracking', 'Delivered + review ask', 'Gift recipient: on its way', 'Bag left behind', 'Velour Circle points', 'Bulk order quote'];
+class Component extends DCLogic {
+  state = { i: 0 };
+  renderVals() {
+    const i = this.state.i;
+    const v = {
+      tabs: NAMES.map((name, k) => ({
+        name, num: String(k + 1).padStart(2, '0'),
+        bg: k === i ? '#17362D' : 'transparent', fg: k === i ? '#F7F2EA' : '#231F1B',
+        select: () => this.setState({ i: k })
+      }))
+    };
+    NAMES.forEach((_, k) => { v['is' + k] = k === i; });
+    return v;
+  }
+}
+</script>
+</body>
+</html>

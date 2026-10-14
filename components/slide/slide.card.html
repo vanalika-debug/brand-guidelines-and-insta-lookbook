@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x394" name="Slide frame" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="margin:0;background:var(--velour-ground);"><div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v !== window && v.Panel && v.Eyebrow && v.Headline) return v; } catch (e) {} } return {}; })();
+const { SlideFrame, Eyebrow, Headline, Em, GoldRule } = NS;
+function App() { return (
+  <div style={{ width: 700, height: 394, overflow: 'hidden' }}>
+    <div style={{ transform: 'scale(' + (700 / 1920) + ')', transformOrigin: '0 0' }}>
+      <SlideFrame footerLeft="Velour — Narrative" footerRight="06 / 14">
+        <Eyebrow size={20}>02 · Belief — In practice</Eyebrow>
+        <Headline size="84px" style={{ marginTop: 28 }}>Belief is what you <Em>give up.</Em></Headline>
+        <GoldRule width={86} weight={2} style={{ margin: '44px 0' }} />
+        <div style={{ fontSize: 30, lineHeight: 1.6, maxWidth: 900 }}>In 2024, Velour began with a full range and chose a narrower one. Dark chocolate only. Never milk or white. Never below 60% cacao.</div>
+      </SlideFrame>
+    </div>
+  </div>
+); }
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

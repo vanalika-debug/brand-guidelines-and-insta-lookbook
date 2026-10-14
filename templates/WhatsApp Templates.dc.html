@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>body{margin:0;background:#F6F2EA;}a{color:#17362D;}a:hover{color:#231F1B;}</style>
+</helmet>
+<div style="min-height:100vh;background:#F6F2EA;color:#231F1B;font-family:Lora,serif;padding:56px 6vw 80px;box-sizing:border-box;">
+
+<header style="display:flex;flex-direction:column;gap:14px;max-width:720px;">
+<div style="font-family:'Alex Brush',cursive;font-size:40px;line-height:1;color:#8A6A1E;">Velour</div>
+<div style="font-size:11px;letter-spacing:.3em;color:#8A6A1E;">TEMPLATES · WHATSAPP</div>
+<h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:46px;line-height:1.1;">Seven messages, <em style="color:#8A6A1E;">written to be sent by a person.</em></h1>
+<div style="width:40px;height:1px;background:#B5923D;"></div>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#6E655A;text-wrap:pretty;">For the WhatsApp Business app. Free-form, so no template approval. Replace anything in braces, keep the rest as written.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#6E655A;margin-top:4px;">
+<div>– No emoji, no exclamation marks.</div>
+<div>– Bold only the order number and the date.</div>
+<div>– Always signed with a name.</div>
+</div>
+</header>
+
+<div style="margin-top:52px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;">
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">01 · ORDER CONFIRMED</div>
+<button onClick="{{ copy0 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label0 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">After payment clears.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Name}</span>,</div>
+<div>Thank you for your order <strong>#<span style="color:#8A6A1E;">{Order no.}</span></strong>. We have it, and we will begin packing it by hand today.</div>
+<div><span style="color:#8A6A1E;">{Items}</span><br>Total: ₹<span style="color:#8A6A1E;">{Amount}</span></div>
+<div>We will write again when it leaves our kitchen, with tracking.</div>
+<div>With warmth,<br><span style="color:#8A6A1E;">{Your name}</span>, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">12:04</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">02 · SHIPPED</div>
+<button onClick="{{ copy1 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label1 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">When the courier collects.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Name}</span>,</div>
+<div>Your order <strong>#<span style="color:#8A6A1E;">{Order no.}</span></strong> is on its way with <span style="color:#8A6A1E;">{Courier}</span>. It should reach you by <strong><span style="color:#8A6A1E;">{Date}</span></strong>.</div>
+<div>Track it here: <span style="color:#8A6A1E;">{Tracking link}</span></div>
+<div>Once it arrives, keep it somewhere cool and dry, away from the fridge.</div>
+<div>With warmth,<br><span style="color:#8A6A1E;">{Your name}</span>, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">16:30</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">03 · DELIVERED</div>
+<button onClick="{{ copy2 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label2 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">The day after delivery, with a review ask.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Name}</span>,</div>
+<div>Your order <strong>#<span style="color:#8A6A1E;">{Order no.}</span></strong> has arrived. We hope it reached you just as we packed it. If anything is not right, reply here and one of us will put it right.</div>
+<div>When you have tasted it, a few words on our website would mean a great deal: <span style="color:#8A6A1E;">{Review link}</span></div>
+<div>With warmth,<br><span style="color:#8A6A1E;">{Your name}</span>, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">13:15</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">04 · GIFT ON ITS WAY</div>
+<button onClick="{{ copy3 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label3 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">To the recipient, when a gift ships.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Recipient}</span>,</div>
+<div><span style="color:#8A6A1E;">{Gifted by}</span> has sent you something from Velour. It is on its way and should reach you by <strong><span style="color:#8A6A1E;">{Date}</span></strong>.</div>
+<div><em>"<span style="color:#8A6A1E;">{Gift message}</span>"</em></div>
+<div>You can follow it here: <span style="color:#8A6A1E;">{Tracking link}</span></div>
+<div>With warmth,<br><span style="color:#8A6A1E;">{Your name}</span>, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">11:02</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">05 · THE VELOUR TABLE</div>
+<button onClick="{{ copy4 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label4 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">Weekly, to the community. One image, a short note.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:4px 4px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<img src="../assets/instagram/still-01-nama.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:4px;">
+<div style="padding:0 10px;display:flex;flex-direction:column;gap:9px;">
+<div><strong>The Velour Table</strong> · <span style="color:#8A6A1E;">{Week}</span></div>
+<div>This week at the table: Nama, our Japanese chocolate fudge, made with Hokkaido cream and dark cocoa. Cut the first square slowly.</div>
+<div><span style="color:#8A6A1E;">{Link}</span></div>
+<div>Vanalika</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">09:00</div>
+</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">06 · FESTIVE ORDER-BY</div>
+<button onClick="{{ copy5 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label5 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">About two weeks before a festival. Information, not urgency.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Name}</span>,</div>
+<div>For <span style="color:#8A6A1E;">{Festival}</span>, the last day to order for delivery within India is <strong><span style="color:#8A6A1E;">{Date}</span></strong>. Every box is packed by hand, so we like a few days to do them properly.</div>
+<div>This year's boxes: <span style="color:#8A6A1E;">{Link}</span></div>
+<div>For 25 boxes or more, reply here and Abhay will help.</div>
+<div>With warmth,<br><span style="color:#8A6A1E;">{Your name}</span>, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">12:30</div>
+</div>
+</div>
+</article>
+
+<article style="display:flex;flex-direction:column;gap:14px;">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(35,31,27,.14);padding-top:14px;">
+<div style="font-size:11px;letter-spacing:.28em;color:#8A6A1E;">07 · BULK ENQUIRY REPLY</div>
+<button onClick="{{ copy6 }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ label6 }}</button>
+</div>
+<div style="font-size:12.5px;color:#6E655A;">First reply to a corporate or bulk enquiry.</div>
+<div style="background:#EDE6D9;padding:18px 16px;">
+<div style="background:#FBF8F2;border-radius:6px;padding:12px 14px 8px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;color:#231F1B;display:flex;flex-direction:column;gap:9px;">
+<div>Hello <span style="color:#8A6A1E;">{Name}</span>,</div>
+<div>Thank you for thinking of Velour for <span style="color:#8A6A1E;">{Occasion}</span>. I'm Abhay, and I look after gifting. To put a quote together, could you share:</div>
+<div>– Number of boxes<br>– Delivery date and city (or cities)<br>– A budget per box, if you have one<br>– Your logo for the sleeve, and the message for the card inside</div>
+<div>I will come back to you within a working day. We are here 12pm–7pm, Sundays off.</div>
+<div>With warmth,<br>Abhay Srivastava, the Velour team</div>
+<div style="align-self:flex-end;font-size:11px;color:#8C8378;">15:48</div>
+</div>
+</div>
+</article>
+
+</div>
+
+<footer style="margin-top:56px;border-top:1px solid rgba(35,31,27,.14);padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:12px;letter-spacing:.06em;color:#6E655A;">
+<div>hello@velourchocolates.com</div>
+<div>+91 98706 37994</div>
+<div>12pm–7pm, Sundays off</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const T = [
+`Hello {Name},
+
+Thank you for your order *#{Order no.}*. We have it, and we will begin packing it by hand today.
+
+{Items}
+Total: ₹{Amount}
+
+We will write again when it leaves our kitchen, with tracking.
+
+With warmth,
+{Your name}, the Velour team`,
+`Hello {Name},
+
+Your order *#{Order no.}* is on its way with {Courier}. It should reach you by *{Date}*.
+
+Track it here: {Tracking link}
+
+Once it arrives, keep it somewhere cool and dry, away from the fridge.
+
+With warmth,
+{Your name}, the Velour team`,
+`Hello {Name},
+
+Your order *#{Order no.}* has arrived. We hope it reached you just as we packed it. If anything is not right, reply here and one of us will put it right.
+
+When you have tasted it, a few words on our website would mean a great deal: {Review link}
+
+With warmth,
+{Your name}, the Velour team`,
+`Hello {Recipient},
+
+{Gifted by} has sent you something from Velour. It is on its way and should reach you by *{Date}*.
+
+_"{Gift message}"_
+
+You can follow it here: {Tracking link}
+
+With warmth,
+{Your name}, the Velour team`,
+`*The Velour Table* · {Week}
+
+{Two or three lines about this week's piece.}
+
+{Link}
+
+Vanalika`,
+`Hello {Name},
+
+For {Festival}, the last day to order for delivery within India is *{Date}*. Every box is packed by hand, so we like a few days to do them properly.
+
+This year's boxes: {Link}
+
+For 25 boxes or more, reply here and Abhay will help.
+
+With warmth,
+{Your name}, the Velour team`,
+`Hello {Name},
+
+Thank you for thinking of Velour for {Occasion}. I'm Abhay, and I look after gifting. To put a quote together, could you share:
+
+– Number of boxes
+– Delivery date and city (or cities)
+– A budget per box, if you have one
+– Your logo for the sleeve, and the message for the card inside
+
+I will come back to you within a working day. We are here 12pm–7pm, Sundays off.
+
+With warmth,
+Abhay Srivastava, the Velour team`];
+class Component extends DCLogic {
+  state = { copied: -1 };
+  copy(i) {
+    navigator.clipboard?.writeText(T[i]).catch(() => {});
+    this.setState({ copied: i });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ copied: -1 }), 1600);
+  }
+  renderVals() {
+    const v = {};
+    T.forEach((_, i) => { v['copy' + i] = () => this.copy(i); v['label' + i] = this.state.copied === i ? 'COPIED' : 'COPY TEXT'; });
+    return v;
+  }
+}
+</script>
+</body>
+</html>

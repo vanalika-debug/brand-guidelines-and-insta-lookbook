@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>body{margin:0;background:#EDE6D9;}a{color:#17362D;}a:hover{color:#231F1B;}</style>
+</helmet>
+<div style="min-height:100vh;background:#EDE6D9;color:#231F1B;font-family:Lora,serif;padding:48px 5vw 80px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px;">
+
+<header style="display:flex;flex-direction:column;gap:12px;max-width:720px;">
+<div style="font-size:11px;letter-spacing:.3em;color:#8A6A1E;">TEMPLATES · WORK EMAILS</div>
+<h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:42px;line-height:1.1;">Written by a person, <em style="color:#8A6A1E;">signed by the team.</em></h1>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#6E655A;text-wrap:pretty;">Plain emails from Gmail with an HTML signature. Every email closes “With warmth, the Velour team”, with the sender's name below.</p>
+</header>
+
+<div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;">
+
+<nav style="display:flex;flex-direction:column;gap:2px;width:240px;flex:0 0 auto;">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="6">
+<button onClick="{{ t.select }}" style="text-align:left;font-family:Lora,serif;font-size:13px;line-height:1.4;padding:11px 14px;border:none;cursor:pointer;transition:background 360ms,color 360ms;background:{{ t.bg }};color:{{ t.fg }};display:flex;gap:12px;"><span style="font-size:10px;letter-spacing:.2em;opacity:.7;padding-top:2px;">{{ t.num }}</span><span>{{ t.name }}</span></button>
+</sc-for>
+</nav>
+
+<div style="flex:1 1 600px;max-width:680px;display:flex;flex-direction:column;gap:16px;">
+
+<sc-if value="{{ is0 }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+<sc-for list="{{ people }}" as="p" hint-placeholder-count="4">
+<div style="background:#FBF8F2;padding:26px 26px 22px;display:flex;flex-direction:column;gap:18px;">
+<div style="display:flex;flex-direction:column;gap:4px;">
+<div style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2;color:#231F1B;">{{ p.name }}</div>
+<div style="font-size:9.5px;letter-spacing:.3em;color:#8A6A1E;">{{ p.titleCaps }}</div>
+<div style="width:32px;height:1px;background:#B5923D;margin:10px 0 8px;"></div>
+<div style="display:flex;align-items:baseline;gap:10px;"><span style="font-family:'Alex Brush',cursive;font-size:26px;line-height:1;color:#8A6A1E;">Velour</span><span style="font-size:8.5px;letter-spacing:.34em;color:#6E655A;">LUXURY DARK CHOCOLATES</span></div>
+<div style="font-size:12px;line-height:1.6;color:#6E655A;margin-top:6px;">hello@velourchocolates.com · +91 98706 37994<br>velourchocolates.com · 12pm–7pm, Sundays off</div>
+</div>
+<div style="display:flex;justify-content:flex-end;"><button onClick="{{ p.copy }}" style="font-family:Lora,serif;font-size:10px;letter-spacing:.24em;background:transparent;border:1px solid #17362D;color:#17362D;padding:6px 10px;cursor:pointer;transition:all 360ms;" style-hover="background:#17362D;color:#F7F2EA;">{{ p.label }}</button></div>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;font-size:12.5px;line-height:1.6;color:#6E655A;">Copy places rich HTML on the clipboard; paste it into Gmail › Settings › Signature. Recipients without Alex Brush installed see “Velour” in italic serif.</p>
+</sc-if>
+
+<sc-if value="{{ notSig }}">
+<div style="display:flex;flex-direction:column;gap:5px;font-size:13px;color:#6E655A;border-bottom:1px solid rgba(35,31,27,.14);padding-bottom:14px;">
+<sc-if value="{{ is1 }}"><div><span style="color:#231F1B;">To</span> {Name} &lt;{email}&gt;</div><div style="color:#231F1B;font-size:15px;">Velour gifting for {Company}, {Occasion}</div></sc-if>
+<sc-if value="{{ is2 }}"><div><span style="color:#231F1B;">To</span> {Name} &lt;{email}&gt;</div><div style="color:#231F1B;font-size:15px;">Re: Wedding boxes, {Couple}</div></sc-if>
+<sc-if value="{{ is3 }}"><div><span style="color:#231F1B;">To</span> {Name} &lt;{email}&gt;</div><div style="color:#231F1B;font-size:15px;">Re: Order #{Order no.}</div></sc-if>
+<sc-if value="{{ is4 }}"><div><span style="color:#231F1B;">To</span> {Name} &lt;{email}&gt;</div><div style="color:#231F1B;font-size:15px;">Velour: bean-to-bar dark chocolate from Idukki</div></sc-if>
+<sc-if value="{{ is5 }}"><div><span style="color:#231F1B;">To</span> {Name} &lt;{email}&gt;</div><div style="color:#231F1B;font-size:15px;">Purchase order {PO no.}: {Item}</div></sc-if>
+</div>
+
+<div style="background:#FBF8F2;padding:40px 44px 36px;display:flex;flex-direction:column;gap:18px;font-size:15px;line-height:1.7;color:#231F1B;">
+
+<sc-if value="{{ is5 }}">
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-bottom:22px;border-bottom:1px solid rgba(35,31,27,.14);margin-bottom:8px;">
+<div style="font-family:'Alex Brush',cursive;font-size:36px;line-height:1;color:#8A6A1E;">Velour</div>
+<div style="font-size:9px;letter-spacing:.38em;color:#6E655A;">VELOUR LUXURY DARK CHOCOLATES PVT. LTD.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is1 }}">
+<p style="margin:0;">Dear {Name},</p>
+<p style="margin:0;">Thank you for considering Velour for {Occasion}. As promised, a short proposal is attached, with three boxes at different budgets.</p>
+<div style="display:flex;flex-direction:column;gap:2px;"><div><span style="color:#B5923D;">–</span> From 25 boxes, all year round</div><div><span style="color:#B5923D;">–</span> Your logo on the sleeve, your card inside</div><div><span style="color:#B5923D;">–</span> Delivered to one address or a list</div></div>
+<p style="margin:0;">Our chocolate is single-origin dark chocolate from Idukki, Kerala, stone-ground in small batches with short ingredient lists. Every box is packed by hand.</p>
+<p style="margin:0;">I am happy to take you through it on a call this week, whenever suits you.</p>
+<div style="display:flex;"><div style="border:1px solid rgba(35,31,27,.14);padding:10px 14px;font-size:12.5px;color:#6E655A;display:flex;gap:10px;"><span style="font-size:9px;letter-spacing:.24em;color:#8A6A1E;padding-top:2px;">PDF</span>Velour — Gifting proposal, {Company}.pdf</div></div>
+</sc-if>
+
+<sc-if value="{{ is2 }}">
+<p style="margin:0;">Dear {Name},</p>
+<p style="margin:0;">Congratulations to you both, and thank you for thinking of us.</p>
+<p style="margin:0;">We make boxes for every ceremony, from mehendi to reception, and we can build them around your colours and your guest list. To begin, could you tell me:</p>
+<div style="display:flex;flex-direction:column;gap:2px;"><div><span style="color:#B5923D;">–</span> The dates, and the events you are planning for</div><div><span style="color:#B5923D;">–</span> Roughly how many guests</div><div><span style="color:#B5923D;">–</span> The city, or cities, for delivery</div><div><span style="color:#B5923D;">–</span> Whether you would like a printed card inside</div></div>
+<p style="margin:0;">Once I have these, I will send a few options with prices. For larger weddings we ask for {n} weeks, so every box is packed properly.</p>
+</sc-if>
+
+<sc-if value="{{ is3 }}">
+<p style="margin:0;">Dear {Name},</p>
+<p style="margin:0;">Thank you for writing, and I am sorry your order did not reach you as it should have. That is not how we packed it.</p>
+<p style="margin:0;">I have arranged a replacement {Product}, which leaves our kitchen on {Date}. You do not need to send anything back.</p>
+<p style="margin:0;">If you would prefer a refund, reply to this email and I will arrange it the same day.</p>
+</sc-if>
+
+<sc-if value="{{ is4 }}">
+<p style="margin:0;">Dear {Name},</p>
+<p style="margin:0;">I read your piece on {Topic} and thought Velour might interest you.</p>
+<p style="margin:0;">We are a small bean-to-bar chocolate company. Our cacao is single-origin Criollo, organically grown in Idukki, Kerala, and stone-ground slowly. We make dark chocolate only, 60% and up, with short ingredient lists. Vanalika Dhakre Nagpal started Velour in her home kitchen in 2020.</p>
+<p style="margin:0;">I would be glad to send you a box with the lab reports for the range, and to set up a conversation with Vanalika if that would be useful.</p>
+<div style="display:flex;"><div style="border:1px solid rgba(35,31,27,.14);padding:10px 14px;font-size:12.5px;color:#6E655A;display:flex;gap:10px;"><span style="font-size:9px;letter-spacing:.24em;color:#8A6A1E;padding-top:2px;">PDF</span>Velour Media Kit 2026.pdf</div></div>
+</sc-if>
+
+<sc-if value="{{ is5 }}">
+<p style="margin:0;">Dear {Name},</p>
+<p style="margin:0;">Please find attached purchase order {PO no.} for {Item}, {Quantity}, for delivery to {Address} by {Date}.</p>
+<p style="margin:0;">Payment terms are as agreed: {Terms}. Please quote our GSTIN on the invoice and include the certificate of analysis for this lot.</p>
+<p style="margin:0;">If any detail needs changing, write to me directly and we will update the order.</p>
+<div style="display:flex;"><div style="border:1px solid rgba(35,31,27,.14);padding:10px 14px;font-size:12.5px;color:#6E655A;display:flex;gap:10px;"><span style="font-size:9px;letter-spacing:.24em;color:#8A6A1E;padding-top:2px;">PDF</span>PO-{PO no.}.pdf</div></div>
+</sc-if>
+
+<div style="display:flex;flex-direction:column;gap:2px;margin-top:6px;"><div>With warmth,</div><div>the Velour team</div></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding-top:4px;">
+<div style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2;">{{ signer.name }}</div>
+<div style="font-size:9.5px;letter-spacing:.3em;color:#8A6A1E;">{{ signer.titleCaps }}</div>
+<div style="width:32px;height:1px;background:#B5923D;margin:10px 0 8px;"></div>
+<div style="display:flex;align-items:baseline;gap:10px;"><span style="font-family:'Alex Brush',cursive;font-size:26px;line-height:1;color:#8A6A1E;">Velour</span><span style="font-size:8.5px;letter-spacing:.34em;color:#6E655A;">LUXURY DARK CHOCOLATES</span></div>
+<div style="font-size:12px;line-height:1.6;color:#6E655A;margin-top:6px;">hello@velourchocolates.com · +91 98706 37994<br>velourchocolates.com · 12pm–7pm, Sundays off</div>
+</div>
+
+<sc-if value="{{ is5 }}">
+<div style="border-top:1px solid rgba(35,31,27,.14);padding-top:14px;margin-top:10px;font-size:11px;line-height:1.6;letter-spacing:.04em;color:#6E655A;text-align:center;">Velour Luxury Dark Chocolates Pvt. Ltd. · {Registered address}<br>GSTIN {GSTIN} · CIN {CIN} · hello@velourchocolates.com</div>
+</sc-if>
+
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const NAMES = ['Signatures', 'Corporate gifting proposal', 'Wedding enquiry reply', 'Customer care reply', 'Press / collab outreach', 'Supplier / B2B letterhead'];
+const PEOPLE = [
+  { name: 'Vanalika Dhakre Nagpal', title: 'Founder' },
+  { name: 'Aman Nagpal', title: 'Co-founder' },
+  { name: 'Abhay Srivastava', title: 'Sales Associate' },
+  { name: 'Ananya Mittal', title: 'Marketing Head' }
+];
+const SIGNER = [null, 2, 0, 3, 3, 1];
+const sigHtml = p => `<table cellpadding="0" cellspacing="0" style="font-family:Lora,Georgia,serif;color:#231F1B;"><tr><td style="padding-top:8px;">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;">${p.name}</div>
+<div style="font-size:10px;letter-spacing:3px;color:#8A6A1E;">${p.title.toUpperCase()}</div>
+<div style="width:32px;height:1px;background:#B5923D;margin:10px 0 8px;line-height:1px;font-size:1px;">&nbsp;</div>
+<div><span style="font-family:'Alex Brush',Georgia,serif;font-style:italic;font-size:24px;color:#8A6A1E;">Velour</span> <span style="font-size:9px;letter-spacing:3px;color:#6E655A;">LUXURY DARK CHOCOLATES</span></div>
+<div style="font-size:12px;line-height:1.6;color:#6E655A;">hello@velourchocolates.com · +91 98706 37994<br><a href="https://velourchocolates.com" style="color:#6E655A;">velourchocolates.com</a> · 12pm–7pm, Sundays off</div>
+</td></tr></table>`;
+class Component extends DCLogic {
+  state = { i: 0, copied: -1 };
+  copySig(k) {
+    const p = PEOPLE[k], html = sigHtml(p);
+    const text = `${p.name}\n${p.title}\nVelour · Luxury Dark Chocolates\nhello@velourchocolates.com · +91 98706 37994\nvelourchocolates.com`;
+    try {
+      navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([text], { type: 'text/plain' }) })]).catch(() => navigator.clipboard.writeText(text).catch(() => {}));
+    } catch (e) { navigator.clipboard?.writeText(text).catch(() => {}); }
+    this.setState({ copied: k });
+    clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: -1 }), 1600);
+  }
+  renderVals() {
+    const i = this.state.i;
+    const s = PEOPLE[SIGNER[i] ?? 0];
+    const v = {
+      tabs: NAMES.map((name, k) => ({ name, num: String(k + 1).padStart(2, '0'), bg: k === i ? '#17362D' : 'transparent', fg: k === i ? '#F7F2EA' : '#231F1B', select: () => this.setState({ i: k }) })),
+      people: PEOPLE.map((p, k) => ({ ...p, titleCaps: p.title.toUpperCase(), copy: () => this.copySig(k), label: this.state.copied === k ? 'COPIED' : 'COPY SIGNATURE' })),
+      signer: { name: s.name, titleCaps: s.title.toUpperCase() },
+      notSig: i !== 0
+    };
+    NAMES.forEach((_, k) => { v['is' + k] = k === i; });
+    return v;
+  }
+}
+</script>
+</body>
+</html>

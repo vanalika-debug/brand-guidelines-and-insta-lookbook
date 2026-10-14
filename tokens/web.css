@@ -1,0 +1,18 @@
+/* Velour website register (velourchocolates.com, Oct 2026) — light. Sampled from live screenshots.
+   Use for website, customer email and WhatsApp. Decks and brand docs stay on the dark register (colors.css). */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
+:root {
+  --web-cream: #F6F2EA;        /* page */
+  --web-cream-2: #EDE6D9;      /* alternate band (reviews) */
+  --web-green: #17362D;        /* bands, solid buttons, active pill */
+  --web-ink: #231F1B;          /* headlines on cream */
+  --web-body: #6E655A;         /* body and meta on cream */
+  --web-gold-dark: #8A6A1E;    /* eyebrows and tier labels on cream */
+  --web-gold: #C9A94F;         /* eyebrows and links on green */
+  --web-rule-gold: #B5923D;    /* review rules */
+  --web-line: rgba(35, 31, 27, 0.14);
+  --web-line-on-green: rgba(201, 169, 79, 0.35);
+  --web-ivory: #F7F2EA;        /* text on green */
+  --font-web-display: "Cormorant Garamond", "Fraunces", Georgia, serif; /* identified by eye — confirm */
+  --font-web-body: "Lora", Georgia, serif;                              /* identified by eye — confirm */
+}

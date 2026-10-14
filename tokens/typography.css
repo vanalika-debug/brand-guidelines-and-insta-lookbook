@@ -1,0 +1,43 @@
+/* Velour type — "Four voices, one register."
+   Wordmark: Alex Brush, the word "Velour" only. Headlines: Fraunces. Body: Archivo. Labels: JetBrains Mono.
+   Word-spacing is never adjusted by hand; rhythm comes from letter-spacing and line-height —
+   tighter as type grows, wider as it shrinks. */
+:root {
+  --font-script: "Alex Brush", "Snell Roundhand", cursive; /* "Velour" only, gold, >=20px, no tracking */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Headlines — Fraunces 400–600, 34–96px, line-height 1.1–1.18 */
+  --type-display-xl: 96px;
+  --type-display-l: 72px;
+  --type-display-m: 56px;
+  --type-display-s: 44px;
+  --type-display-xs: 34px;
+  --type-title: 24px;           /* card / panel titles */
+  --lh-display: 1.1;
+  --lh-display-loose: 1.18;
+  --ls-display: -0.01em;
+  --weight-display: 400;
+  --weight-display-strong: 600;
+
+  /* Body — Archivo 300 body / 600 labels; 15–16px screen, 10.5–13px print; line-height 1.55–1.7 */
+  --type-body-l: 18px;
+  --type-body: 16px;
+  --type-body-s: 15px;
+  --type-caption: 12px;
+  --type-print-body: 11pt;
+  --type-print-caption: 8pt;
+  --lh-body: 1.6;
+  --lh-body-tight: 1.55;
+  --lh-body-loose: 1.7;
+  --weight-body: 300;
+  --weight-body-strong: 600;
+
+  /* Labels — JetBrains Mono, uppercase, letter-spacing .24–.5em. Eyebrows, page numbers, footers, tags. Never body. */
+  --type-label: 11px;
+  --type-label-s: 10px;
+  --ls-label: 0.3em;
+  --ls-label-tight: 0.24em;
+  --ls-label-wide: 0.5em;
+}

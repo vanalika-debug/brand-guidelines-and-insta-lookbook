@@ -1,0 +1,12 @@
+/* Minimal base + helper classes. Everything references tokens. */
+html, body { margin: 0; background: var(--surface-page); color: var(--text-primary); font-family: var(--font-body); font-weight: var(--weight-body); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; transition: color var(--dur-quick) var(--ease-velour); }
+a:hover { color: var(--link-hover); }
+.v-eyebrow { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-label); font-weight: 400; }
+.v-display { font-family: var(--font-display); font-weight: var(--weight-display); line-height: var(--lh-display); letter-spacing: var(--ls-display); color: var(--text-primary); text-wrap: balance; margin: 0; }
+.v-display em, .v-em { font-style: italic; color: var(--text-emphasis); }
+.v-rule { width: var(--rule-accent-width); height: var(--rule-accent-weight); background: var(--rule-accent); border: 0; margin: 0; }
+.v-body { font-size: var(--type-body); line-height: var(--lh-body); color: var(--text-body); text-wrap: pretty; }
+.v-caption { font-size: var(--type-caption); line-height: 1.5; color: var(--text-caption); }
+.v-panel { background: var(--surface-card); border: var(--border-hairline) solid var(--border-card); }
+.v-panel.is-active { border-color: var(--border-card-active); }

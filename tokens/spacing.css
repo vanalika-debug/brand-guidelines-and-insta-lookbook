@@ -1,0 +1,28 @@
+/* Velour spacing & layout. Generous negative space; square corners everywhere. */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+  --space-11: 96px;
+  --space-12: 128px;
+
+  --radius: 0;                  /* panels, swatches, image frames: never rounded */
+  --border-hairline: 1px;
+  --rule-accent-width: 40px;    /* short gold rule under headlines */
+  --rule-accent-weight: 1.5px;
+
+  /* Deck frame (16:9) — ratios measured from the Velour decks */
+  --slide-margin-x: 6.9%;       /* 132px at 1920 */
+  --slide-footer-inset: 4.8%;   /* 52px at 1080 */
+
+  /* Image formats */
+  --ratio-social: 4 / 5;        /* 1080×1350 social & paid ads */
+  --ratio-shopify: 1 / 1;       /* Shopify product, PDP, bundle */
+}

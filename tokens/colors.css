@@ -1,0 +1,53 @@
+/* Velour colour — "Dark ground, gold light."
+   Source: Operating Standards Deck (Edition 01, Oct 2026), Part 1 · Visual rules. */
+:root {
+  /* Ground — 60% of any layout. Warm near-black, never cool. */
+  --velour-ground: #15100C;      /* primary background */
+  --velour-ground-2: #1D1610;    /* gradient partner; panel edges */
+  --velour-panel: #221A13;       /* cards and boxed content */
+
+  /* Ink — 30%. Warm ivory, never pure white. */
+  --velour-ink: #F3E8D6;         /* primary text on dark */
+  --velour-ink-soft: #C9B89C;    /* body copy, secondary text */
+  --velour-ink-faint: #8A7860;   /* captions, footers */
+
+  /* Gold — 10% max. Gold is a light, not a fill. */
+  --velour-gold: #C89F5B;        /* signature accent: eyebrows, rules, icons */
+  --velour-gold-bright: #E7C884; /* emphasis and italics */
+
+  /* Colour of the Year — one accent a year, ribbon / lining / sticker only, <=10%, never replacing gold. */
+  --velour-accent-2026: #00594C; /* deep teal green, approved */
+
+  /* Packaging — true product colours (confirmed by Velour, 13 Oct 2026). For print, photo matching and packaging-led layouts. */
+  --pack-lid-cream: #F6E1CD;
+  --pack-lid-foil: #CF8F4E;
+  --pack-ribbon: #7A4E2E;
+  --pack-bar-carton: #181614;
+  --pack-tin-label: #3E2016;
+  --pack-sachet: #9A6052;
+
+  /* Hairlines (derived from the deck's panel borders and table rules) */
+  --velour-line: rgba(200, 159, 91, 0.22);
+  --velour-line-soft: rgba(201, 184, 156, 0.14);
+
+  /* Semantic aliases */
+  --surface-page: var(--velour-ground);
+  --surface-page-gradient: radial-gradient(120% 95% at 85% 0%, var(--velour-ground-2) 0%, var(--velour-ground) 68%);
+  --surface-card: var(--velour-panel);
+  --surface-accent-year: var(--velour-accent-2026);
+
+  --text-primary: var(--velour-ink);
+  --text-body: var(--velour-ink-soft);
+  --text-caption: var(--velour-ink-faint);
+  --text-label: var(--velour-gold);
+  --text-emphasis: var(--velour-gold-bright);
+  --text-numeral: var(--velour-gold-bright);
+
+  --border-card: var(--velour-line);
+  --border-card-active: var(--velour-gold);
+  --border-rule: var(--velour-line-soft);
+  --rule-accent: var(--velour-gold);
+
+  --link: var(--velour-gold-bright);
+  --link-hover: var(--velour-ink);
+}

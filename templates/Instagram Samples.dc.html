@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Archivo:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400&display=swap">
+<style>body{margin:0;background:#15100C;}a{color:#E7C884;}a:hover{color:#F3E8D6;}</style>
+</helmet>
+<div style="min-height:100vh;background:radial-gradient(ellipse at 20% 0%,#1D1610 0%,#15100C 60%);color:#F3E8D6;font-family:Archivo,sans-serif;font-weight:300;padding:56px 6.9vw 80px;box-sizing:border-box;">
+
+<header style="display:flex;flex-direction:column;gap:14px;max-width:760px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;color:#C89F5B;">TEMPLATES · INSTAGRAM — SAMPLES</div>
+<h1 style="margin:0;font-family:Fraunces,serif;font-weight:400;font-size:44px;line-height:1.12;">Four series, <em style="color:#E7C884;">fewer words.</em></h1>
+<div style="width:40px;height:1px;background:#C89F5B;"></div>
+<p style="margin:0;font-size:15px;line-height:1.65;color:#C9B89C;text-wrap:pretty;">Three samples per series across 4:5 feed, carousel and 9:16 story. Overlays are set in layout, never baked into the image. Captions follow the three-line pattern: a story line, one cleared fact, a person's name.</p>
+</header>
+
+<section style="margin-top:64px;display:flex;flex-direction:column;gap:22px;">
+<div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(200,159,91,.22);padding-top:18px;flex-wrap:wrap;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#C89F5B;">01 · THE MENAGERIE</div>
+<div style="font-size:13px;color:#8A7860;">Indian miniature, arched gold keyline, one animal, one real product, one idea.</div>
+</div>
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;">
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · NIGHT</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/menagerie-01-night.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:0;right:0;bottom:9px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.4em;color:#8A6A1E;">THE MENAGERIE · NIGHT</div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">In the hills of Idukki, a hornbill keeps watch over the cacao…</div><div>Every florentine carries the Velour seal, pressed into dark chocolate.</div><div style="font-style:italic;color:#8A7860;">Drawn in the Indian miniature tradition.</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · GREEN</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/menagerie-02-green.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:0;right:0;bottom:7px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.4em;color:#C9A94F;">THE MENAGERIE · GREEN</div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">An elephant takes the long way through the garden, in no hurry at all…</div><div>Stuffed Medjool dates: pistachio, rose petal, candied fruit with gold leaf.</div><div style="font-style:italic;color:#8A7860;">Drawn in the Indian miniature tradition.</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:225px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">9:16 STORY · BLUSH</div>
+<div style="position:relative;width:225px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/menagerie-03-blush.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:6px;letter-spacing:.4em;color:#8A6A1E;">THE MENAGERIE · BLUSH</div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Two parakeets, one rose, and a box tied by hand…</div><div>Cream board, gold-foil windows, brown grosgrain ribbon.</div><div style="font-style:italic;color:#8A7860;">Drawn in the Indian miniature tradition.</div></div></sc-if>
+</div>
+
+</div>
+</section>
+
+<section style="margin-top:64px;display:flex;flex-direction:column;gap:22px;">
+<div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(200,159,91,.22);padding-top:18px;flex-wrap:wrap;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#C89F5B;">02 · SPECIMEN PLATES</div>
+<div style="font-size:13px;color:#8A7860;">Top-down on cream paper, museum spacing, one plate per slide. Carousel, 3 slides.</div>
+</div>
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;">
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">CAROUSEL · 1 / 3</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/specimen-01-cacao.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:34px;bottom:32px;display:flex;flex-direction:column;gap:3px;"><div style="font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.4em;color:#8A6A1E;">PLATE I</div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#231F1B;">Theobroma cacao, Idukki</div></div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">A pod, three beans, a pinch of nibs. Everything that goes into a bar, before anything else does…</div><div>Single-origin Criollo, organically grown in Idukki, Kerala.</div><div style="font-style:italic;color:#8A7860;">With warmth, the Velour team</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">CAROUSEL · 2 / 3</div>
+<div style="box-sizing:border-box;width:320px;height:400px;background:#221A13;border:1px dashed rgba(200,159,91,.35);padding:28px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.3em;color:#C89F5B;">PENDING · GENERATION LIMIT</div>
+<div style="font-size:12px;line-height:1.55;color:#8A7860;">Plate II: the six stuffed dates in a 2 × 3 grid on cream paper. Overlay “Six Medjool dates”.</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">CAROUSEL · 3 / 3</div>
+<div style="box-sizing:border-box;width:320px;height:400px;background:#221A13;border:1px dashed rgba(200,159,91,.35);padding:28px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.3em;color:#C89F5B;">PENDING · GENERATION LIMIT</div>
+<div style="font-size:12px;line-height:1.55;color:#8A7860;">Plate III: four cocoa-dusted Nama cubes in a single row, one turned to show the interior. Overlay “Nama, cut four ways”.</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section style="margin-top:64px;display:flex;flex-direction:column;gap:22px;">
+<div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(200,159,91,.22);padding-top:18px;flex-wrap:wrap;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#C89F5B;">03 · EDITORIAL STILL LIFE</div>
+<div style="font-size:13px;color:#8A7860;">Dark surface, one gold key light from the upper left, product the brightest point.</div>
+</div>
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;">
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · NAMA</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/still-01-nama.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:26px;top:30px;right:26px;display:flex;flex-direction:column;gap:10px;"><div style="font-family:'Alex Brush',cursive;font-size:24px;color:#C9A94F;line-height:1;">Velour</div><div style="font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.12;color:#F7F2EA;">Cut the first square <em style="color:#E7C884;">slowly.</em></div></div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Cut the first square slowly; the rest can wait…</div><div>Nama, Japanese chocolate fudge, 200 g. Hokkaido cream and dark cocoa.</div><div style="font-style:italic;color:#8A7860;">With warmth, Ananya</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:225px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">9:16 STORY · GIFT LID</div>
+<div style="position:relative;width:225px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/still-02-lid.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<sc-if value="{{ overlays }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:20px;top:34px;right:20px;display:flex;flex-direction:column;gap:8px;"><div style="font-family:'Alex Brush',cursive;font-size:20px;color:#C9A94F;line-height:1;">Velour</div><div style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.15;color:#F7F2EA;">Some gifts are meant to be opened <em style="color:#E7C884;">slowly.</em></div></div></sc-if>
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Some gifts are meant to be opened slowly…</div><div>Six dates and six florentines, tied with our brown grosgrain ribbon.</div><div style="font-style:italic;color:#8A7860;">With warmth, the Velour team</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · FLORENTINE</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/still-03-florentine.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Almonds, cranberries and a thin disc of dark chocolate on top…</div><div>Almond Cranberry Florentine: protein rich, fibre rich, low fat, vegan.</div><div style="font-style:italic;color:#8A7860;">With warmth, the Velour team</div></div></sc-if>
+</div>
+
+</div>
+</section>
+
+<section style="margin-top:64px;display:flex;flex-direction:column;gap:22px;">
+<div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(200,159,91,.22);padding-top:18px;flex-wrap:wrap;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#C89F5B;">04 · FOUNDER'S HAND</div>
+<div style="font-size:13px;color:#8A7860;">Daylight, real hands, unstaged. No overlay; the caption carries the words.</div>
+</div>
+<div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;">
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · BREAKING</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/hand-01-breaking.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Some afternoons need only one cookie, broken in half and shared…</div><div>Protein rich, fibre rich, low fat. It says so on the tin.</div><div style="font-style:italic;color:#8A7860;">Vanalika</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:320px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">4:5 FEED · THE BOW</div>
+<div style="position:relative;width:320px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/hand-02-ribbon.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">Every bow on every box is tied by one of us…</div><div>For corporate and wedding gifting, write to hello@velourchocolates.com.</div><div style="font-style:italic;color:#8A7860;">Abhay</div></div></sc-if>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;width:225px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:#8A7860;">9:16 STORY · THE NOTE</div>
+<div style="position:relative;width:225px;height:400px;overflow:hidden;border:1px solid rgba(200,159,91,.22);">
+<img src="../assets/instagram/hand-03-note.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<sc-if value="{{ captions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:6px;font-family:Lora,serif;font-size:12.5px;line-height:1.55;color:#C9B89C;"><div style="color:#F3E8D6;">A note, a box of six, and a cup of chai going cold…</div><div>Six stuffed Medjool dates, each with its own topping.</div><div style="font-style:italic;color:#8A7860;">Vanalika</div></div></sc-if>
+</div>
+
+</div>
+</section>
+
+<section style="margin-top:64px;border-top:1px solid rgba(200,159,91,.22);padding-top:18px;display:flex;flex-direction:column;gap:10px;max-width:760px;">
+<div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#C89F5B;">REVIEW BEFORE POSTING</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.6;color:#C9B89C;">
+<div>– All images are AI-assisted from real product references. Check packaging against PACKAGING-TRUTH.md before use.</div>
+<div>– Nama still life: the tin came out rectangular and unlabelled; the real tin is shallow, rounded and labelled.</div>
+<div>– The bow: ribbon lettering is partly garbled at small size.</div>
+<div>– Florentine still life: the tin came out square with a gold lid, and its label text is garbled. The real tin is round. Use as a mood reference only.</div>
+<div>– The note: the handwriting on the card is semi-legible scribble.</div>
+<div>– Specimen plates II and III are pending: the daily generation limit was reached again.</div>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCaptions&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showOverlays&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { captions: this.props.showCaptions ?? true, overlays: this.props.showOverlays ?? true };
+  }
+}
+</script>
+</body>
+</html>
